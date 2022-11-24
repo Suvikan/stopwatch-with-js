@@ -12,11 +12,19 @@ window.onload = function () {
     buttonStart.onclick = function() {
 
         clearInterval(Interval);
-        Interval = setInterval(startWatch, 10);
+        Interval = setInterval(startWatch, 10); //setInterval repeatedly calls a function or executes a code snippet, with a fixed time delay between each call
     }
 
     buttonStop.onclick = function() {
         clearInterval(Interval);
+    }
+
+    buttonReset.onclick = function() {
+        clearInterval(Interval);
+        tens = "00";
+        seconds = "00";
+        addTens.innerHTML = tens;
+        addSeconds.innerHTML = seconds;
     }
 
 
